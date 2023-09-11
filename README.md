@@ -37,6 +37,12 @@ terraform applyを実行するとカレントディレクトリに`nifcloud_rsa`
 cd ansible
 ```
 
+SSH初回実行時にホストのチェックが行われてる。yes/or聞かれるので止めたい場合は以下
+
+```
+export ANSIBLE_HOST_KEY_CHECKING=false
+```
+
 ```
 ansible-playbook -i ../terraform/ansible_inventory install-pkgs.yml
 ```
